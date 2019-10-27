@@ -15,7 +15,7 @@ else
 }
 
 $request = array();
-$request['type'] = "login";
+$request['type'] = "register";
 $request['username'] = "test";
 $request['password'] = "password";
 $request['message'] = $msg;

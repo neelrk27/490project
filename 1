@@ -1,0 +1,80 @@
+#!/usr/bin/php
+<?php
+require_once('path.inc');
+require_once('get_host_info.inc');
+require_once('rabbitMQLib.inc');
+
+function doLogin($username,$password)
+{
+    // lookup username in databas
+
+	$mydb = new mysqli('127.0.0.1','user','password','MOVIE_DB');
+	
+if ($mydb->errno != 0) {
+		echo "Failed to connect : ".$mydb->error.PHP_EOL;
+		exit(0);
+}
+
+echo "Connected to database".PHP_EOL;
+$query = mysqli_query($mydb,"SELECT * FROM users where username = 'test' and password = 'password' ");	
+$count = mysqli_num_rows($query);
+if ($count == 1) {
+
+	echo "User in database..VERIFIED";
+	return true;
+}else{
+	echo " Not in database...Please relogin";
+	return false;
+}
+function doRegister($username,$password)
+{
+
+$mydb = new mysqli('127.0.0.1','user','password','MOVIE_DB');
+
+if ($mydb->errno != 0) {
+                echo "Failed to connect : ".$mydb->error.PHP_EOL;
+                exit(0);
+}
+echo "Connected to database".PHP_EOL;
+$query = mysqli_query($mydb,"SELECT * FROM users where username = '$username'");
+$count = mysqli_num_rows($query);
+
+if ($count == 1) {
+	echo "User already in the database";
+		return true;
+}else{
+	//create new user
+	$createquer y =mysqli_query($mydb,"insert into users values (NULL, '$username', '$password')");
+	echo "Account has been created";
+
+}
+}
+
+function requestProcessor($request)
+{
+  echo "received request".PHP_EOL;
+  var_dump($request);
+  if(!isset($request['type']))
+  {
+    return "ERROR: unsupported message type";
+  }
+  switch ($request['type'])
+  {
+    case "login":
+      return doLogin($request['username'],$request['password']);
+    case "register":
+     return doRegister($request['username'],$request['password']);
+    case "validate_session":
+      return doValidate($request['sessionId']);
+  }
+  return array("returnCode" => '0', 'message'=>"Server received request and processed");
+}
+
+$server = new rabbitMQServer("testRabbitMQ.ini","testServer");
+
+echo "testRabbitMQServer BEGIN".PHP_EOL;
+$server->process_requests('requestProcessor');
+echo "testRabbitMQServer END".PHP_EOL;
+exit();
+?>
+
