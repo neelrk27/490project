@@ -18,7 +18,7 @@ function doLogin($username,$password)
 	error_log("Username : $username");
 	error_log("Password : $password");
 	$password_hash = password_hash($password, PASSWORD_DEFAULT);
-	$mydb = new mysqli('127.0.0.1','user','password','MOVIE_DB');
+	$mydb = new mysqli('192.168.1.138','user','password','MOVIE_DB');
 	
 if ($mydb->errno != 0) {
 		echo "Failed to connect : ".$mydb->error.PHP_EOL;
@@ -54,7 +54,7 @@ function doRegister($userName,$userPass)
 	$hash_password = password_hash($userPass, PASSWORD_DEFAULT);
         //lookup username in database
 	//Connect to DB
-        $mydb = new mysqli('127.0.0.1','user','password','MOVIE_DB');
+        $mydb = new mysqli('192.168.1.138','user','password','MOVIE_DB');
         if ($mydb->errno != 0){
                 echo "<br><br>Failed to connect to database: ".$mydb->error.PHP_EOL;
                 exit(0);

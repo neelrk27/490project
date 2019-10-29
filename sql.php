@@ -1,6 +1,6 @@
 #!/usr/bin/php
 <?php
-$dbip = "127.0.0.1:3306";
+$dbip = "192.168.1.138:3306";
 $username = "user";
 $password = "password";
 $dbname = "MOVIE_DB";

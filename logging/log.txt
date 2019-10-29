@@ -1,0 +1,88 @@
+[27-Oct-2019 15:34:08 America/New_York] PHP Fatal error:  Failed to start request processor: AMQPException: Library error: unexpected protocol state in /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc:122
+Stack trace:
+#0 /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc(122): AMQPQueue->consume(Array)
+#1 /home/it490/490/rabbitmqphp_example/testRabbitMQServer.php(105): rabbitMQServer->process_requests('requestProcesso...')
+#2 {main} in /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc on line 132
+[27-Oct-2019 15:46:41 America/New_York] PHP Fatal error:  Failed to start request processor: AMQPConnectionException: Server connection error: 403, message: ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile. - Potential login failure. in /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc:110
+Stack trace:
+#0 /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc(110): AMQPConnection->connect()
+#1 /home/it490/490/rabbitmqphp_example/testRabbitMQServer.php(105): rabbitMQServer->process_requests('requestProcesso...')
+#2 {main} in /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc on line 132
+[27-Oct-2019 15:51:45 America/New_York] PHP Fatal error:  Failed to start request processor: AMQPConnectionException: Server connection error: 403, message: ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile. - Potential login failure. in /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc:110
+Stack trace:
+#0 /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc(110): AMQPConnection->connect()
+#1 /home/it490/490/rabbitmqphp_example/testRabbitMQServer.php(105): rabbitMQServer->process_requests('requestProcesso...')
+#2 {main} in /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc on line 132
+[27-Oct-2019 19:46:33 America/New_York] Register request has been sent to the server
+[27-Oct-2019 19:46:33 America/New_York] PHP Notice:  Undefined index: username in /var/www/html/rabbitMQRegister.php on line 23
+[27-Oct-2019 19:46:33 America/New_York] PHP Notice:  Undefined index: password in /var/www/html/rabbitMQRegister.php on line 24
+[27-Oct-2019 19:46:33 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc on line 215
+[27-Oct-2019 19:46:34 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/it490/490/rabbitmqphp_example/get_host_info.inc:28) in /var/www/html/rabbitMQRegister.php on line 44
+[27-Oct-2019 19:46:34 America/New_York] Registration has been completed
+[27-Oct-2019 19:58:44 America/New_York] PHP Notice:  Undefined index: username in /var/www/html/rabbitMQLogin.php on line 23
+[27-Oct-2019 19:58:44 America/New_York] PHP Notice:  Undefined index: password in /var/www/html/rabbitMQLogin.php on line 24
+[27-Oct-2019 19:58:44 America/New_York] Sending login request to server
+[27-Oct-2019 19:58:44 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc on line 215
+[27-Oct-2019 19:58:44 America/New_York] Username : 
+[27-Oct-2019 19:58:44 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/it490/490/rabbitmqphp_example/get_host_info.inc:28) in /var/www/html/rabbitMQLogin.php on line 46
+[27-Oct-2019 19:58:44 America/New_York] Please re-enter your username or password
+[27-Oct-2019 19:59:04 America/New_York] Register request has been sent to the server
+[27-Oct-2019 19:59:04 America/New_York] PHP Notice:  Undefined index: username in /var/www/html/rabbitMQRegister.php on line 23
+[27-Oct-2019 19:59:04 America/New_York] PHP Notice:  Undefined index: password in /var/www/html/rabbitMQRegister.php on line 24
+[27-Oct-2019 19:59:04 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc on line 215
+[27-Oct-2019 19:59:04 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/it490/490/rabbitmqphp_example/get_host_info.inc:28) in /var/www/html/rabbitMQRegister.php on line 47
+[27-Oct-2019 19:59:04 America/New_York] Please register with a different username
+[27-Oct-2019 20:00:19 America/New_York] PHP Notice:  Undefined index: username in /var/www/html/rabbitMQLogin.php on line 23
+[27-Oct-2019 20:00:19 America/New_York] PHP Notice:  Undefined index: password in /var/www/html/rabbitMQLogin.php on line 24
+[27-Oct-2019 20:00:19 America/New_York] Sending login request to server
+[27-Oct-2019 20:01:27 America/New_York] PHP Notice:  Undefined index: username in /var/www/html/rabbitMQLogin.php on line 23
+[27-Oct-2019 20:01:27 America/New_York] PHP Notice:  Undefined index: password in /var/www/html/rabbitMQLogin.php on line 24
+[27-Oct-2019 20:01:27 America/New_York] Sending login request to server
+[27-Oct-2019 20:01:27 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc on line 215
+[27-Oct-2019 20:01:27 America/New_York] Username : 
+[27-Oct-2019 20:01:27 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/it490/490/rabbitmqphp_example/get_host_info.inc:28) in /var/www/html/rabbitMQLogin.php on line 46
+[27-Oct-2019 20:01:27 America/New_York] Please re-enter your username or password
+[27-Oct-2019 20:01:45 America/New_York] PHP Notice:  Undefined index: username in /var/www/html/rabbitMQLogin.php on line 23
+[27-Oct-2019 20:01:45 America/New_York] PHP Notice:  Undefined index: password in /var/www/html/rabbitMQLogin.php on line 24
+[27-Oct-2019 20:01:45 America/New_York] Sending login request to server
+[27-Oct-2019 20:01:45 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc on line 215
+[27-Oct-2019 20:01:45 America/New_York] Username : 
+[27-Oct-2019 20:01:45 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/it490/490/rabbitmqphp_example/get_host_info.inc:28) in /var/www/html/rabbitMQLogin.php on line 46
+[27-Oct-2019 20:01:45 America/New_York] Please re-enter your username or password
+[28-Oct-2019 19:32:06 America/New_York] PHP Fatal error:  Failed to start request processor: AMQPConnectionException: Socket error: could not connect to host. in /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc:110
+Stack trace:
+#0 /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc(110): AMQPConnection->connect()
+#1 /home/it490/490/rabbitmqphp_example/testRabbitMQServer.php(105): rabbitMQServer->process_requests('requestProcesso...')
+#2 {main} in /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc on line 132
+[28-Oct-2019 19:32:50 America/New_York] PHP Fatal error:  Failed to start request processor: AMQPConnectionException: Socket error: could not connect to host. in /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc:110
+Stack trace:
+#0 /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc(110): AMQPConnection->connect()
+#1 /home/it490/490/rabbitmqphp_example/testRabbitMQServer.php(105): rabbitMQServer->process_requests('requestProcesso...')
+#2 {main} in /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc on line 132
+[28-Oct-2019 19:33:56 America/New_York] PHP Fatal error:  Failed to start request processor: AMQPException: Library error: unexpected protocol state in /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc:122
+Stack trace:
+#0 /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc(122): AMQPQueue->consume(Array)
+#1 /home/it490/490/rabbitmqphp_example/testRabbitMQServer.php(105): rabbitMQServer->process_requests('requestProcesso...')
+#2 {main} in /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc on line 132
+[28-Oct-2019 19:38:42 America/New_York] PHP Fatal error:  Failed to start request processor: AMQPConnectionException: Socket error: could not connect to host. in /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc:110
+Stack trace:
+#0 /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc(110): AMQPConnection->connect()
+#1 /home/it490/490/rabbitmqphp_example/testRabbitMQServer.php(105): rabbitMQServer->process_requests('requestProcesso...')
+#2 {main} in /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc on line 132
+[28-Oct-2019 19:39:53 America/New_York] PHP Fatal error:  Failed to start request processor: AMQPConnectionException: Socket error: could not connect to host. in /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc:110
+Stack trace:
+#0 /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc(110): AMQPConnection->connect()
+#1 /home/it490/490/rabbitmqphp_example/testRabbitMQServer.php(105): rabbitMQServer->process_requests('requestProcesso...')
+#2 {main} in /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc on line 132
+[28-Oct-2019 20:50:32 America/New_York] PHP Fatal error:  Failed to start request processor: AMQPConnectionException: Server connection error: 530, message: NOT_ALLOWED - access to vhost 'testHost' refused for user 'user' - Potential login failure. in /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc:110
+Stack trace:
+#0 /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc(110): AMQPConnection->connect()
+#1 /home/it490/490/rabbitmqphp_example/testRabbitMQServer.php(105): rabbitMQServer->process_requests('requestProcesso...')
+#2 {main} in /home/it490/490/rabbitmqphp_example/rabbitMQLib.inc on line 132
+[28-Oct-2019 20:58:37 America/New_York] Register request has been recieved
+[28-Oct-2019 20:58:40 America/New_York] PHP Warning:  mysqli::__construct(): (HY000/2002): No route to host in /home/it490/490/rabbitmqphp_example/testRabbitMQServer.php on line 57
+[28-Oct-2019 20:58:40 America/New_York] PHP Warning:  doRegister(): Couldn't fetch mysqli in /home/it490/490/rabbitmqphp_example/testRabbitMQServer.php on line 58
+[28-Oct-2019 20:58:40 America/New_York] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/it490/490/rabbitmqphp_example/testRabbitMQServer.php on line 64
+[28-Oct-2019 20:58:40 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/it490/490/rabbitmqphp_example/testRabbitMQServer.php on line 65
+[28-Oct-2019 20:58:40 America/New_York] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/it490/490/rabbitmqphp_example/testRabbitMQServer.php on line 74
+[28-Oct-2019 20:58:40 America/New_York] Account is created for : j1
